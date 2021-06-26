@@ -42,7 +42,7 @@ cursor.execute("""
 
 
 cursor.execute("insert into lists (name, description) values('Trabajo','List number 1');")
-cursor.execute("insert into lists (name, description) values('Escuela','List pendientes escuela');")
+cursor.execute("insert into lists (name, description) values('Escuela','List pendientes escuela ');")
 cursor.execute("insert into lists (name, description) values('Familia','List para pendientes de la familia');")
 #
 cursor.execute("insert into tasks (id_usuario, id_list, task, status) values(1, 1,'Tarea 1 Lista 1', 'Pendiente');")
