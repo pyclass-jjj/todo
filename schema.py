@@ -11,7 +11,7 @@ cursor.execute("""
         CREATE TABLE IF NOT EXISTS users (
             pk INTEGER PRIMARY KEY AUTOINCREMENT,
             username varchar(16),
-            password varchar(32)
+            password varchar(255)
         )
         """)
 

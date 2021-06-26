@@ -85,8 +85,7 @@ class Modelo:
                      WHERE pk={datos['id_tarea']}
                  """
         self.query(query)
-        return 0
-
+      
     def nueva_tarea(self, datos, username):
 
         id_usuario = self.get_id_user(username)
