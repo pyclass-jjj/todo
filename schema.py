@@ -61,7 +61,7 @@ cursor.execute("insert into tasks (id_usuario, id_list, task, status) values(2, 
 cursor.execute("insert into tasks (id_usuario, id_list, task, status) values(2, 2,'Tarea 5 Lista 2', 'Pendiente');")
 cursor.execute("insert into tasks (id_usuario, id_list, task, status) values(2, 2,'Tarea 6 Lista 2', 'Pendiente');")
 cursor.execute("insert into tasks (id_usuario, id_list, task, status) values(2, 2,'Tarea 7 Lista 2', 'Pendiente');")
-cursor.execute("insert into tasks (id_usuario, id_list, task, status) values(2, 2,'Tarea 8 Lista 2', 'Pendiente');")
+cursor.execute("insert into tasks (id_usuario, id_list, task, status) values(2, 2,'Tarea 8 Lista 2 ', 'Pendiente');")
 
 connection.commit()
 #
