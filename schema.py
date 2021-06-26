@@ -76,5 +76,7 @@ connection.commit()
 #    exc_type, exc_value, exc_tb = sys.exc_info()
 #    print(traceback.format_exception(exc_type, exc_value, exc_tb))
 
+
+
 cursor.close()
 connection.close()
