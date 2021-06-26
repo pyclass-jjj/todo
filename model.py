@@ -136,6 +136,9 @@ class Modelo:
         return categorias
 
 
+
+
+
 if __name__=='__main__':
 
     modelo = Modelo()
@@ -149,4 +152,3 @@ if __name__=='__main__':
     #print(acceso)
 
 
-    
