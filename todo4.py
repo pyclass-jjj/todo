@@ -119,7 +119,6 @@ def editar():
     username = valida_session()
 
     if username:
-
         if request.method == 'GET':
             id_tarea = request.args.get('id_tarea')
             modelo = model.Modelo()
