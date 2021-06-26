@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>TODO LISTS</title>
+  <meta name="description" content="HTML5 Template">
+  <meta name="author" content="JJJA">
+  <link rel="stylesheet" href="static/style.css?v=1.0">
+
+</head>
+
+<body>
+    <h1>Nueva Categoría</h1>
+    <br>
+    <p> Usuario: {{ username }} </p>
+
+    <form name='nueva' method='post'>
+        <input name='accion' type='hidden'>
+        <table border=1>
+            <tr>
+                <th>Categoría</th>
+                <td><input name='categoria' type='text'></td>
+            </tr>
+        </table>
+
+    <br><p>
+        <button onclick="document.nueva.accion.value='nueva'">Guardar</button>
+        <button onclick="document.nueva.accion.value='cancelar'">Cancelar</button>
+    </form>
+</body>
+

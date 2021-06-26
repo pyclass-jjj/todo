@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>TODO LISTS</title>
+  <meta name="description" content="HTML5 Template">
+  <meta name="author" content="JJJA">
+  <link rel="stylesheet" href="static/style.css?v=1.0">
+
+</head>
+
+<body>
+    <h1>Nueva tarea</h1>
+    <br>
+    <p> Usuario: {{ username }} </p>
+
+    <form name='nueva' method='post'>
+        <input name='accion' type='hidden'>
+        <table border=1>
+            <tr>
+                <th>Categoría</th>
+                <td>
+                    <select name='categoria'>
+                        <option value="" selected disabled hidden>Categoría</option>
+                        {% for pk, name in categorias %}
+                            <option value={{pk}}>{{name}}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Tarea</th>
+                <td><input name='tarea' type='text'></td>
+            </tr>
+            <tr>
+                <th>Fecha Inicio</th>
+                <td><input name='fechaini' type='date'></td>
+            </tr>
+            <tr>
+                <th>Fecha Fin</th>
+                <td><input name='fechafin' type='date'></td>
+            </tr>
+            <tr>
+                <th>Estatus</th>
+                <td>
+                    <select name='estatus'>
+                        <option value="" selected hidden>Estatus</option>
+                        <option value='Pendiente'>Pendiente</option>
+                        <option value='Proceso'>Proceso</option>
+                        <option value='Terminado'>Terminado</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+    <br><p>
+        <button onclick="document.nueva.accion.value='nueva'">Guardar</button>
+        <button onclick="document.nueva.accion.value='cancelar'">Cancelar</button>
+    </form>
+</body>
+

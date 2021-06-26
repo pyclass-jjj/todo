@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>TODO LISTS</title>
+  <meta name="description" content="HTML5 Template">
+  <meta name="author" content="JJJA">
+  <link rel="stylesheet" href="static/style.css?v=1.0">
+
+</head>
+
+<body>
+    <h1>Eliminar Tareas</h1>
+    <br>
+    <form name='eliminar' method='post'>
+        <input name='accion' type='hidden'>
+        <span>Desea eliminar la tarea número <input name='id_tarea' value='{{ id_tarea }}' readonly><span><br><br>
+        <button onclick="document.eliminar.accion.value='eliminar';">Eliminar</button>
+        <button onclick="document.eliminar.accion.value='cancelar';">Cancelar</button>
+    </form>
+    <p>{{ mensaje }}</p>
+
+</body>
+
+

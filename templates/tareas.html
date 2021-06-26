@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>TODO LISTS</title>
+  <meta name="description" content="HTML5 Template">
+  <meta name="author" content="JJJA">
+  <link rel="stylesheet" href="static/style.css?v=1.0">
+
+</head>
+
+<body>
+    <h1>Lista de Tareas Pendientes</h1>
+    <br>
+    <p> Usuario: {{ username }} </p>
+    <button onclick="location.href='/nueva_tarea'">Nueva Tarea</button>
+    <button onclick="location.href='/nueva_categoria'">Nueva Categoría</button>
+    <button onclick="location.href='/logout'">Salir</button>
+    <br><p>
+
+    <table border=1>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Categoría</th>
+                <th>Tarea</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th>Estatus</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+        {% for tarea in tareas %}
+            <tr>
+                <td>{{tarea[0]}}</td>
+                <td>{{tarea[1]}}</td>
+                <td>{{tarea[2]}}</td>
+                <td>{{tarea[3]}}</td>
+                <td>{{tarea[4]}}</td>
+                <td>{{tarea[5]}}</td>
+                <td><a href='/editar?id_tarea={{tarea[0]}}'><img src='static/edit.png'></td>
+                <td><a href='/eliminar?id_tarea={{tarea[0]}}'><img src='static/delete.png'></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+</body>
+

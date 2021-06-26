@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>TODO LISTS</title>
+  <meta name="description" content="HTML5 Template">
+  <meta name="author" content="JJJA">
+  <link rel="stylesheet" href="static/style.css?v=1.0">
+
+</head>
+
+<body>
+    <h1>Edición de tarea {{id_tarea}}</h1>
+    <br>
+    <p> Usuario: {{ username }} </p>
+
+    <form name='editar' method='post'>
+        <input name='accion' type='hidden'>
+        <table border=1>
+            <tr>
+                <th>ID</th>
+                <td><input name='id_tarea' type='text' value='{{tarea[0]}}' readonly></td>
+            </tr>
+            <tr>
+                <th>Categoría</th>
+                <td>
+                    <select name='categoria'>
+                        <option value="" selected hidden>Categoría</option>
+                        {% for pk, name in categorias %}
+                        <option {% if tarea[1]==name %} selected {% endif %} value={{pk}}>{{name}}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Tarea</th>
+                <td><input name='tarea' type='text' value='{{tarea[2]}}'></td>
+            </tr>
+            <tr>
+                <th>Fecha Inicio</th>
+                <td><input name='fechaini' type='date' value='{{tarea[3]}}'></td>
+            </tr>
+            <tr>
+                <th>Fecha Fin</th>
+                <td><input name='fechafin' type='date' value='{{tarea[4]}}'></td>
+            </tr>
+            <tr>
+                <th>Estatus</th>
+                <td>
+                    <select name='estatus'>
+                        <option value="" selected hidden>Estatus</option>
+                        <option {% if tarea[5]=='Pendiente' %} selected {% endif %} value='Pendiente'>Pendiente</option>
+                        <option {% if tarea[5]=='Proceso' %}   selected {% endif %} value='Proceso'>Proceso</option>
+                        <option {% if tarea[5]=='Terminado' %} selected {% endif %} value='Terminado'>Terminado</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    <br><p>
+        <button onclick="document.editar.accion.value='editar';">Guardar</button>
+        <button onclick="document.editar.accion.value='cancelar';">Cancelar</button>
+    </form>
+</body>
+
