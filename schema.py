@@ -39,7 +39,7 @@ cursor.execute("""
                 ON DELETE CASCADE
         )
         """)
-
+#hola
 
 cursor.execute("insert into lists (name, description) values('Trabajo','List number 1');")
 cursor.execute("insert into lists (name, description) values('Escuela','List number 2');")
