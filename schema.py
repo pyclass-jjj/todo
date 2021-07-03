@@ -18,7 +18,7 @@ cursor.execute("""
 cursor.execute("""
         CREATE TABLE IF NOT EXISTS lists (
             pk INTEGER PRIMARY KEY AUTOINCREMENT,
-            name varchar(64),
+            name varchar(128),
             description varchar(255)
         )
         """)
