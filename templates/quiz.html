@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Evaluación PyClass</title>
+  <meta name="description" content="Evaluación">
+  <meta name="author" content="JJJA">
+  <link rel="stylesheet" href="static/quiz.css?v=1.0">
+</head>
+
+  <body>
+    <h1>Evaluación Python 3 Nivel Básico-Intermedio</h1>
+    <form action='/results' method='POST'>
+      <ol>
+        {% for i in q %}
+          <li><u>{{i}}</u>:</li>
+          {% for j in o[i] %}
+            <input type='radio' value='{{j}}' name='{{i}}' /><span>{{j}}</span>
+            <br>
+          {% endfor %}
+          <br>
+        {% endfor %}
+      </ol>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
+

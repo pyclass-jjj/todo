@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 import model
+import quiz
 
 
 app = Flask(__name__)
@@ -119,6 +120,7 @@ def editar():
     username = valida_session()
 
     if username:
+
         if request.method == 'GET':
             id_tarea = request.args.get('id_tarea')
             modelo = model.Modelo()
@@ -185,9 +187,10 @@ def nueva_categoria():
     else:
         return redirect(url_for('home'))
 
-    
+app.add_url_rule('/quiz', view_func=quiz.quiz)
+app.add_url_rule('/results', methods=['POST'], view_func=quiz.quiz_answers)
+
+
 if __name__ == '__main__':
     app.run(port=8002, debug=True)
 
-'''comentario prueba'''
-    
