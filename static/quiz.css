@@ -1,0 +1,15 @@
+html, body {
+    background-color: #280F20;
+}
+
+h1, h2, span {
+    color: white;
+    text-align: center;
+}
+
+p,ul,ol {
+    color: white;
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+
